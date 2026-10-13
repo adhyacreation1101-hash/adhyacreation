@@ -1,227 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f8fafc" />
+  <meta name="description" content="A clean portal for documentation, shared resources, and project updates." />
+  <title>Overview | Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
-    :root {
-      --bg: #fafafa;
-      --card-bg: #ffffff;
-      --border: #e4e4e7;
-      --text-main: #18181b;
-      --text-muted: #71717a;
-      --accent: #27272a;
-      --accent-hover: #09090b;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
-      background-color: var(--bg);
-      color: var(--text-main);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      line-height: 1.6;
-    }
-
-    /* Minimal Header */
-    header {
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 32px 24px 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .site-title {
-      font-size: 15px;
-      font-weight: 600;
-      letter-spacing: -0.2px;
-      color: var(--text-main);
-      text-decoration: none;
-    }
-
-    nav a {
-      font-size: 14px;
-      color: var(--text-muted);
-      text-decoration: none;
-      margin-left: 20px;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: var(--text-main);
-    }
-
-    /* Central Layout */
-    main {
-      flex: 1;
-      max-width: 900px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 80px 24px 60px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-    .hero-content {
-      max-width: 600px;
-      margin-bottom: 56px;
-    }
-
-    .date-label {
-      font-size: 13px;
-      font-weight: 500;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 12px;
-    }
-
-    h1 {
-      font-size: clamp(32px, 5vw, 44px);
-      font-weight: 700;
-      letter-spacing: -1px;
-      line-height: 1.2;
-      margin-bottom: 16px;
-    }
-
-    p.lead {
-      font-size: 17px;
-      color: var(--text-muted);
-      font-weight: 400;
-    }
-
-    /* Information / Navigation Cards */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 16px;
-    }
-
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 24px;
-      text-decoration: none;
-      color: inherit;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-
-    .card:hover {
-      border-color: #a1a1aa;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
-    }
-
-    .card h2 {
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 8px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .card h2 span.arrow {
-      font-size: 14px;
-      color: var(--text-muted);
-      transition: transform 0.2s;
-    }
-
-    .card:hover h2 span.arrow {
-      transform: translateX(3px);
-      color: var(--text-main);
-    }
-
-    .card p {
-      font-size: 14px;
-      color: var(--text-muted);
-      line-height: 1.5;
-    }
-
-    /* Footer */
-    footer {
-      width: 100%;
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 24px;
-      border-top: 1px solid var(--border);
-      font-size: 13px;
-      color: var(--text-muted);
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    footer a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
+    :root { color-scheme: light; --bg:#f8fafc; --surface:#fff; --ink:#101828; --muted:#667085; --line:#e6eaf0; --brand:#365cf5; --brand-dark:#2449d6; --soft:#eef2ff; --shadow:0 16px 48px rgba(16,24,40,.055); }
+    *,*::before,*::after{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
+    button{font:inherit}
+    .container{width:min(1120px,calc(100% - 48px));margin-inline:auto}
+    .site-header{background:rgba(255,255,255,.9);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10;backdrop-filter:blur(14px)}
+    .header-inner{min-height:80px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{display:inline-flex;align-items:center;gap:12px;font-size:18px;font-weight:800;letter-spacing:-.6px}
+    .brand-mark{display:grid;place-items:center;width:39px;height:39px;border-radius:12px;background:var(--brand);color:white;box-shadow:0 5px 12px rgba(54,92,245,.2)}
+    .nav{display:flex;align-items:center;gap:30px}
+    .nav a{font-size:14px;font-weight:600;color:#596579;transition:color .2s}
+    .nav a:hover,.nav a:focus-visible{color:var(--brand)}
+    .header-action{display:inline-flex;align-items:center;gap:9px;background:#101828;color:white!important;border-radius:10px;padding:11px 16px;font-size:13px!important}
+    .header-action:hover{background:#344054}
+    main{padding:88px 0 96px}
+    .hero{position:relative;overflow:hidden;border-radius:26px;padding:70px 72px;background:linear-gradient(115deg,#fff 0%,#fff 52%,#eef2ff 100%);border:1px solid var(--line);box-shadow:var(--shadow)}
+    .hero::after{content:"";position:absolute;width:350px;height:350px;border:65px solid rgba(54,92,245,.065);border-radius:50%;right:-115px;top:-115px;pointer-events:none}
+    .hero-content{position:relative;z-index:1;max-width:650px}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;background:var(--soft);color:#3c54bd;padding:7px 12px;border-radius:100px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
+    .eyebrow-dot{width:7px;height:7px;background:#5572ff;border-radius:50%}
+    h1{font-size:clamp(38px,5vw,58px);letter-spacing:-.055em;line-height:1.12;margin:23px 0 20px;font-weight:800}
+    .lead{font-size:17px;color:var(--muted);max-width:580px;margin:0;line-height:1.85}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:12px 19px;border-radius:11px;font-weight:700;font-size:14px;border:1px solid transparent;transition:transform .2s,background .2s,box-shadow .2s}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 18px rgba(54,92,245,.18)}
+    .btn-primary:hover{background:var(--brand-dark)}
+    .btn-secondary{background:white;border-color:#dce2ec;color:#344054}
+    .btn-secondary:hover{background:#f9fafb}
+    .section-head{display:flex;align-items:end;justify-content:space-between;gap:16px;margin:65px 0 23px}
+    .section-kicker{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--brand);margin:0 0 8px}
+    h2{font-size:26px;letter-spacing:-.035em;line-height:1.3;margin:0;font-weight:800}
+    .section-subtitle{margin:8px 0 0;color:var(--muted);font-size:14px}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+    .card{position:relative;display:flex;flex-direction:column;align-items:flex-start;min-height:244px;padding:27px;border:1px solid var(--line);border-radius:17px;background:var(--surface);box-shadow:0 3px 12px rgba(16,24,40,.025);transition:transform .22s,border-color .22s,box-shadow .22s}
+    .card:hover{transform:translateY(-5px);border-color:#c9d2ff;box-shadow:0 16px 32px rgba(16,24,40,.075)}
+    .card-icon{width:51px;height:51px;border-radius:14px;display:grid;place-items:center;margin-bottom:23px}
+    .icon-blue{background:#edf2ff;color:#4366eb}.icon-purple{background:#f4edff;color:#8654d9}.icon-green{background:#eaf8f0;color:#218d61}
+    .card h3{font-size:17px;letter-spacing:-.025em;margin:0 0 9px;font-weight:700}
+    .card p{color:var(--muted);font-size:13px;line-height:1.8;margin:0 0 18px}
+    .card-link{display:inline-flex;align-items:center;gap:8px;margin-top:auto;color:var(--brand);font-size:13px;font-weight:700}
+    .card-link svg{transition:transform .2s}.card:hover .card-link svg{transform:translateX(4px)}
+    .info-strip{margin-top:35px;padding:22px 26px;background:#f0f4ff;border:1px solid #e0e8ff;border-radius:15px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .info-strip strong{display:block;font-size:14px}.info-strip p{margin:3px 0 0;color:var(--muted);font-size:13px}.info-strip a{font-size:13px;font-weight:700;color:var(--brand);white-space:nowrap}
+    footer{background:#fff;border-top:1px solid var(--line)}
+    .footer-inner{padding:30px 0;display:flex;align-items:center;justify-content:space-between;gap:20px;color:var(--muted);font-size:13px}
+    .footer-links{display:flex;gap:22px;flex-wrap:wrap}.footer-links a:hover{color:var(--brand)}
+    svg{display:block;flex-shrink:0}
+    :focus-visible{outline:3px solid #a4b5ff;outline-offset:4px}
+    @media(max-width:800px){.hero{padding:55px 38px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.nav{gap:17px}.nav a{font-size:13px}}
+    @media(max-width:600px){.container{width:min(100% - 32px,1120px)}.header-inner{min-height:70px}.brand{font-size:16px}.nav{gap:14px}.nav a[href="#about"],.nav a[href="#resources"]{display:none}.header-action{padding:9px 12px}.hero{padding:43px 25px;border-radius:19px}.hero::after{right:-240px}.lead{font-size:15px}.hero-actions .btn{flex:1}.section-head{margin-top:48px}.grid{grid-template-columns:1fr}.card{min-height:205px}.info-strip{align-items:flex-start;flex-direction:column}.footer-inner{align-items:flex-start;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
   </style>
 </head>
 <body>
-
-  <header>
-    <a href="/" class="site-title">Portal</a>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#resources">Resources</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Portal home"><span class="brand-mark" aria-hidden="true"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></span>Portal<span style="color:var(--brand)">.</span></a>
+      <nav class="nav" aria-label="Main navigation"><a href="#about">About</a><a href="#resources">Resources</a><a class="header-action" href="mailto:hello@example.com?subject=Portal%20enquiry">Contact <span aria-hidden="true">↗</span></a></nav>
+    </div>
   </header>
-
-  <main>
-    <div class="hero-content">
-      <div class="date-label">Overview</div>
-      <h1>Welcome</h1>
-      <p class="lead">
-        This is a shared space for internal documentation, project files, and system resources. Select an area below to continue.
-      </p>
-    </div>
-
-    <div class="grid">
-      <a href="#docs" class="card">
-        <h2>Documentation <span class="arrow">→</span></h2>
-        <p>Guidelines, setup procedures, and reference materials for ongoing work.</p>
-      </a>
-
-      <a href="#resources" class="card">
-        <h2>Resources <span class="arrow">→</span></h2>
-        <p>Directories, shared asset libraries, and downloadable files.</p>
-      </a>
-
-      <a href="#updates" class="card">
-        <h2>Updates & Notes <span class="arrow">→</span></h2>
-        <p>Recent log entries, changelogs, and procedural notices.</p>
-      </a>
-    </div>
+  <main id="top" class="container">
+    <section class="hero" id="about" aria-labelledby="hero-title"><div class="hero-content"><span class="eyebrow"><span class="eyebrow-dot"></span>Your central workspace</span><h1 id="hero-title">Everything you need,<br>in one place.</h1><p class="lead">Welcome to your information hub. Explore essential documentation, find shared resources, and stay informed with the latest project updates.</p><div class="hero-actions"><a href="#resources" class="btn btn-primary">Explore resources <span aria-hidden="true">→</span></a><a href="#about-resources" class="btn btn-secondary">Learn more <span aria-hidden="true">↗</span></a></div></div></section>
+    <section id="resources" aria-labelledby="resources-heading"><div class="section-head"><div><p class="section-kicker">Quick access</p><h2 id="resources-heading">Explore the portal</h2><p class="section-subtitle">Find the information and tools you need to keep moving.</p></div></div>
+      <div class="grid">
+        <a href="#about-resources" class="card"><span class="card-icon icon-blue"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/><path d="M9 7h6M9 11h6"/></svg></span><h3>Documentation</h3><p>Find guidelines, reference materials, and clear setup instructions.</p><span class="card-link">View documentation <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></span></a>
+        <a href="#about-resources" class="card"><span class="card-icon icon-purple"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 0 1 2-2h5l2 2h7a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M3 11h18"/></svg></span><h3>Shared resources</h3><p>Access organized files, asset libraries, and useful project materials.</p><span class="card-link">Browse resources <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></span></a>
+        <a href="#about-resources" class="card"><span class="card-icon icon-green"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4m8-4v4M3 10h18m-13 5h3m-3 3h7"/></svg></span><h3>Updates & notes</h3><p>Keep track of recent announcements, changes, and notices.</p><span class="card-link">See updates <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14m-7-7 7 7-7 7"/></svg></span></a>
+      </div>
+    </section>
+    <aside class="info-strip" id="about-resources"><div><strong>Designed to keep things simple.</strong><p>This is a starter portal. Replace the sample links with your actual documentation, resources, and update pages.</p></div><a href="mailto:hello@example.com?subject=Portal%20support">Get in touch →</a></aside>
   </main>
-
-  <footer>
-    <span>Public Information Hub</span>
-    <span>Updated regularly</span>
-  </footer>
-
+  <footer><div class="container footer-inner"><span>© <span id="year">2026</span> Portal. All rights reserved.</span><div class="footer-links"><a href="#about">About</a><a href="#resources">Resources</a><a href="mailto:hello@example.com?subject=Portal%20enquiry">Contact</a></div></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
